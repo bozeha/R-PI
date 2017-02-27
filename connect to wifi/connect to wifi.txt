@@ -1,0 +1,61 @@
+להתחבר לחיבור אלחוטי במקרה זה שם הרשת האלחוטית 
+DSL-G225
+והסיסמא 
+DSL-G225
+
+
+###install network-manager and iw plus update 
+sudo apt-get update && sudo apt-get install --reinstall iw	
+
+apt-get install  network-manager
+
+#### command to connect to network DSL-G225
+nmcli dev wifi connect DSL-G225 password 77777777
+
+### install wifi tools 
+sudo apt-get install wireless-tools
+
+### see if we connacted command 
+ 
+iwconfig wlan0
+
+### result need to look like that 
+
+wlan0     IEEE 802.11bg  ESSID:"DSL-G225"  Nickname:"<WIFI@REALTEK>"
+          Mode:Managed  Frequency:2.462 GHz  Access Point: 1C:5F:2B:90:C2:31
+
+		  
+		  
+### we can save the wifi settings in file 
+sudo nano /etc/network/interfaces
+
+### add to the file the connection settings 
+
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+auto wlan0
+iface wlan0 inet dhcp
+wpa-ssid "DSL-G225"
+wpa-psk  "77777777"
+
+
+
+
+
+
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+auto wlan0
+iface wlan0 inet dhcp
+wpa-ssid "DSL-G225"
+wpa-psk  "77777777"
+
+
+
+

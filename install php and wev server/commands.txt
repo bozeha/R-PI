@@ -1,0 +1,18 @@
+1. Install Apache
+sudo apt-get install apache2
+
+2. Install MySQL
+sudo apt-get install mysql-server
+
+3. Install PHP
+sudo apt-get install php5 libapache2-mod-php5
+
+4. Restart Server
+sudo /etc/init.d/apache2 restart
+
+5. Check Apache
+Open a web browser and navigate to http://localhost/. You should see a message saying It works!
+
+
+6. Check PHP
+php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
