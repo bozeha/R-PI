@@ -16,3 +16,6 @@ Open a web browser and navigate to http://localhost/. You should see a message s
 
 6. Check PHP
 php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
+
+
+the www path is in /var/www/html
